@@ -1,0 +1,27 @@
+/* This program finds two data sets (1. and 2.)
+    μ1.=μ2. and σ1.=σ2.
+*/
+
+#include<stdio.h>
+
+int main (void)
+{
+	int n;
+  printf("Please enter the max number: ");
+	scanf("%d", &n);
+	for (int a= 1; a<n; a++)
+		for (int b=1; b<n; b++)
+			for(int c=1; c<n; c++)
+				for(int x= 1; x<n; x++)
+					for(int y=1; y <n; y++)
+						for(int z= 1; z <n; z++)
+						{
+							if(a!= b && a!= c && a!=x && a!=y && a!= z && b!= c && b!= x && b!= y && b!= z && c!= x && c!=y && c!=z && x!=y &&x!=z && y!=z)
+								if((a*a+b*b+c*c==x*x+y*y+z*z) && (a+b+c==x+y+z))
+									{
+										printf(" %d %d %d      %d %d %d\n", a, b, c, x, y, z);
+										
+									}
+						}
+	return 0;							
+}
